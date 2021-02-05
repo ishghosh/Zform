@@ -1,0 +1,91 @@
+<mvc:View controllerName="com.form.Zform.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Table id="idTable" headerText="EMPTABLE" items="{/}">
+							<columns>
+								<Column>
+									<ObjectIdentifier title="ID"/>
+								</Column>
+								<Column>
+									<ObjectIdentifier title="Name"/>
+								</Column>
+								<Column>
+									<ObjectIdentifier title="Address"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem type="Active" press="onRowPress">
+									<cells>
+										<Text text="{ID}"/>
+										<Text text="{Name}"/>
+										<Text text="{Address}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+						<!--<VBox class="sapUiSmallMargin">-->
+						<!--	<f:SimpleForm id="idform" editable="false" layout="ResponsiveGridLayout" title="Address" labelSpanXL="3" labelSpanL="3" labelSpanM="3"-->
+						<!--		labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"-->
+						<!--		singleContainerFullSize="false">-->
+						<!--		<f:content>-->
+						<!--			<VBox>-->
+						<!--				<VBox>-->
+						<!--					<Label text="Name"/>-->
+						<!--					<HBox><Text id="nametext" text="{}" visible="true"/>-->
+						<!--						<Input id="name" visible="false" editable="false" submit="handleSavePress"/></HBox>-->
+						<!--				</VBox>-->
+						<!--				<VBox>-->
+						<!--					<Label text="EmpID"/>-->
+						<!--					<HBox>-->
+						<!--						<Text id="idtext" text="{}" visible="true"/>-->
+						<!--						<Input id="id" value="{}" visible="false" submit="handleSavePress" editable="false"/></HBox>-->
+						<!--				</VBox>-->
+						<!--				<VBox>-->
+						<!--					<Label text="Adress"/>-->
+						<!--					<HBox>-->
+						<!--						<Text id="addtext" text="{}" visible="true"/>-->
+						<!--						<Input id="address" submit="handleSavePress" value="{}" visible="false" editable="false"/></HBox>-->
+						<!--				</VBox>-->
+						<!--			</VBox>-->
+						<!--		</f:content>-->
+						<!--	</f:SimpleForm>-->
+						<!--	<Bar>-->
+						<!--		<contentRight>-->
+						<!--			<Button id="edit" text="Edit" enabled="true" press="handleEditPress"/>-->
+						<!--			<Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress"/>-->
+						<!--			<Button id="cancel" text="Cancel" visible="false" press="handleCancelPress"/>-->
+						<!--		</contentRight>-->
+						<!--	</Bar>-->
+						<!--</VBox>-->
+						<VBox class="sapUiSmallMargin">
+							<f:SimpleForm id="idform" editable="false" layout="ResponsiveGridLayout" title="Address" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
+								labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+								singleContainerFullSize="false">
+								<f:content>
+									<VBox>
+										<VBox>
+											<Label text="Name"/>
+											<Text id="nametext" text="{Name}" visible="true"/>
+										</VBox>
+										<VBox>
+											<Label text="EmpID"/>
+											<Text id="idtext" text="{ID}" visible="true"/>
+										</VBox>
+										<VBox>
+											<Label text="Adress"/>
+											<Text id="addtext" text="{Address}" visible="true"/>
+										</VBox>
+									</VBox>
+								</f:content>
+							</f:SimpleForm>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
